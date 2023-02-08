@@ -3,10 +3,11 @@
  */
 
 import sentimentanalysis.AbstractTweet;
-import tweet.TweetHandler;
 
 import java.util.List;
 import java.util.Scanner;
+
+import tweet.TweetHandler;
 
 public class MainApp {
 

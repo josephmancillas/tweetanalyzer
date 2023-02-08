@@ -32,7 +32,7 @@ public class Tweet extends AbstractTweet
                 ", Target: " + getTarget() + ", ID:"
                 +this.getId()+", Date: " +this.getDate()+", Flag: "
                 +this.getFlag() + ", User: " +this.getUser()+", Text: "
-                +this.getText()+"";
+                + this.getText() + "";
     }
 
     @Override
