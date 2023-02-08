@@ -1,4 +1,4 @@
-package Tweet;
+package tweet;
 
 import sentimentanalysis.AbstractTweet;
 import java.util.Date;

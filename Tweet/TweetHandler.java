@@ -1,4 +1,4 @@
-package Tweet;
+package tweet;
 
 import sentimentanalysis.AbstractTweet;
 import sentimentanalysis.SentimentAnalyzer;
@@ -16,7 +16,23 @@ import java.lang.String;
  * Assignment 2
  */
 
-public class TweetHandler implements TweetHandlerInterface{
+public class TweetHandler implements TweetHandlerInterface {
+    
+    static final Scanner usr_in = new Scanner(System.in);
+
+    private List<AbstractTweet> tweetsContainer = new ArrayList<>();
+    private List<AbstractTweet> tweetDatabase = new ArrayList<>();
+
+    private File dataBase = new File("TweetDatabase.ser");
+
+    private String filePath = dataBase.getAbsolutePath();
+
+    private int target;
+    private int id;
+    private Date date;
+    private String flag;
+    private String user;
+    private String tweetbody;
 
 /**
  * Returns Object list of Tweets
@@ -519,20 +535,4 @@ public AbstractTweet parseTweetLine(String tweetLine){
             System.out.println("Tweet:" + i + " " + printedList.get(i).toString());
         }
     }
-
-    static final Scanner  usr_in = new Scanner(System.in);
-
-    private List<AbstractTweet> tweetsContainer = new ArrayList<>();
-    private List<AbstractTweet> tweetDatabase = new ArrayList<>();
-
-    private File dataBase = new File("TweetDatabase.ser");
-
-    private String filePath = dataBase.getAbsolutePath();
-
-    private int target;
-    private int id;
-    private Date date;
-    private String flag;
-    private String user;
-    private String tweetbody;
 }
