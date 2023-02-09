@@ -1,15 +1,16 @@
+package src;
 /**
  * Guide for MainApp
  */
 
-import sentimentanalysis.AbstractTweet;
-
+import src.sentimentanalysis.AbstractTweet;
+import src.tweet.TweetHandler;
 import java.util.List;
 import java.util.Scanner;
 
-import tweet.TweetHandler;
 
-public class MainApp {
+
+public class Main {
 
     // Used to read from System's standard input
     private static final Scanner CONSOLE_INPUT = new Scanner(System.in);

@@ -1,8 +1,9 @@
-package tweet;
+package src.tweet;
 
-import sentimentanalysis.AbstractTweet;
 import java.util.Date;
 import java.util.Objects;
+
+import src.sentimentanalysis.AbstractTweet;
 
 /**
  * Creates Tweet object using a twitter data file's 5 categories

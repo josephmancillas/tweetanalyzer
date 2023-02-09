@@ -1,19 +1,18 @@
-package tweet;
-
-import sentimentanalysis.AbstractTweet;
-import sentimentanalysis.SentimentAnalyzer;
-import sentimentanalysis.TweetHandlerInterface;
+package src.tweet;
 
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
+import src.sentimentanalysis.AbstractTweet;
+import src.sentimentanalysis.SentimentAnalyzer;
+import src.sentimentanalysis.TweetHandlerInterface;
+
 import java.lang.String;
 
 /**
  * @author Joseph Mancillas
- * CS 3354
- * Assignment 2
  */
 
 public class TweetHandler implements TweetHandlerInterface {
@@ -23,8 +22,7 @@ public class TweetHandler implements TweetHandlerInterface {
     private List<AbstractTweet> tweetsContainer = new ArrayList<>();
     private List<AbstractTweet> tweetDatabase = new ArrayList<>();
 
-    private File dataBase = new File("TweetDatabase.ser");
-
+    private File dataBase = new File("database.ser");
     private String filePath = dataBase.getAbsolutePath();
 
     private int target;
@@ -49,13 +47,13 @@ public class TweetHandler implements TweetHandlerInterface {
         File twitterTweets = new File(tweetFile);
 
         try{
-            Scanner scanningTweets = new Scanner(new FileReader
-                    (twitterTweets.getAbsoluteFile()));
-            while(scanningTweets.hasNextLine()){
+            Scanner scanningTweets = new Scanner(new FileReader(twitterTweets.getAbsoluteFile()));
 
+            while (scanningTweets.hasNextLine()) {
                 line = scanningTweets.nextLine();
                 tweetsContainer.add(parseTweetLine(line));
             }
+                    
             scanningTweets.close();
         }catch (FileNotFoundException i){
             System.out.println("ERROR: Your file could not be found." +

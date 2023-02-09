@@ -2,7 +2,7 @@
  * Code created for TxState - CS 3354.
  */
 
-package sentimentanalysis;
+package src.sentimentanalysis;
 
 import java.io.Serializable;
 import java.util.Date;

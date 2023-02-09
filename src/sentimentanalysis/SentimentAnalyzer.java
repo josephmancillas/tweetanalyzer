@@ -1,7 +1,7 @@
 /*
  * Code created for TxState - CS 3354. 
  */
-package sentimentanalysis;
+package src.sentimentanalysis;
 
 import java.util.*;
 import edu.stanford.nlp.ling.*;
